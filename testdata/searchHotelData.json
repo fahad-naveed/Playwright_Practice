@@ -1,0 +1,87 @@
+{
+    
+    "SearchHotels": [
+    {
+        "location": "Sydney",
+        "hotels": "Hotel Creek",
+        "room_type": "Standard",
+        "room_nos": "1 - One",
+        "datepick_in": "10/10/2023",
+        "datepick_out": "12/10/2023",
+        "adult_room": "2 - Two",
+        "child_room": "0 - None"
+    },
+    {
+        "location": "London",
+        "hotels": "Hotel Creek",
+        "room_type": "Standard",
+        "room_nos": "1 - One",
+        "datepick_in": "10/10/2023",
+        "datepick_out": "12/10/2023",
+        "adult_room": "2 - Two",
+        "child_room": "0 - None"
+    }
+],
+
+    "location": [
+      {
+        "location": "",
+        "hotels": "",
+        "room_type": "Standard",
+        "room_nos": "1 - One",
+        "datepick_in": "10/10/2030",
+        "datepick_out": "12/10/2030",
+        "adult_room": "2 - Two",
+        "child_room": "0 - None"
+      }
+    ],
+    "room_nos": [
+      {
+        "location": "Sydney",
+        "hotels": "Hotel Creek",
+        "room_type": "Standard",
+        "room_nos": "",
+        "datepick_in": "10/10/2030",
+        "datepick_out": "12/10/2030",
+        "adult_room": "2 - Two",
+        "child_room": "0 - None"
+      }
+    ],
+    "checkin": [
+      {
+        "location": "Sydney",
+        "hotels": "Hotel Creek",
+        "room_type": "Standard",
+        "room_nos": "1 - One",
+        "datepick_in": "",
+        "datepick_out": "12/10/2030",
+        "adult_room": "2 - Two",
+        "child_room": "0 - None"
+      }
+    ],
+    "checkout": [
+      {
+        "location": "Sydney",
+        "hotels": "Hotel Creek",
+        "room_type": "Standard",
+        "room_nos": "1 - One",
+        "datepick_in": "10/10/2030",
+        "datepick_out": "",
+        "adult_room": "2 - Two",
+        "child_room": "0 - None"
+      }
+    ],
+    "adult_room": [
+      {
+        "location": "Sydney",
+        "hotels": "Hotel Creek",
+        "room_type": "Standard",
+        "room_nos": "1 - One",
+        "datepick_in": "10/10/2030",
+        "datepick_out": "12/10/2030",
+        "adult_room": "",
+        "child_room": "0 - None"
+      }
+    
+]
+}

@@ -1,0 +1,108 @@
+{
+    
+    "bookHotel": [
+    {
+        "first_name": "Fahad",
+        "last_name": "Naveed",
+        "address": "123 Main St, Lahore, Pakistan",
+        "cc_num": "1234567890123456",
+        "cc_type": "AMEX",
+        "cc_exp_month": "10",
+        "cc_exp_year": "2022",
+        "cc_cvv": "1234"
+    },
+    {
+        "first_name": "Imran",
+        "last_name": "Ali",
+        "address": "123 Main St, Lahore, Pakistan",
+        "cc_num": "1234567890123456",
+        "cc_type": "AMEX",
+        "cc_exp_month": "10",
+        "cc_exp_year": "2022",
+        "cc_cvv": "1234"
+    }
+    ],
+     
+    "negativeTests": [
+    {
+      "first_name": "",
+      "last_name": "User",
+      "address": "Lahore, Pakistan",
+      "cc_num": "1234567812345678",
+      "cc_type": "VISA",
+      "cc_exp_month": "10",
+      "cc_exp_year": "2027",
+      "cc_cvv": "123"
+    },
+    {
+      "first_name": "Test",
+      "last_name": "",
+      "address": "Lahore, Pakistan",
+      "cc_num": "1234567812345678",
+      "cc_type": "VISA",
+      "cc_exp_month": "10",
+      "cc_exp_year": "2027",
+      "cc_cvv": "123"
+    },
+    {
+      "first_name": "Test",
+      "last_name": "User",
+      "address": "",
+      "cc_num": "1234567812345678",
+      "cc_type": "VISA",
+      "cc_exp_month": "10",
+      "cc_exp_year": "2027",
+      "cc_cvv": "123"
+    },
+    {
+      "first_name": "Test",
+      "last_name": "User",
+      "address": "Lahore, Pakistan",
+      "cc_num": "",
+      "cc_type": "VISA",
+      "cc_exp_month": "10",
+      "cc_exp_year": "2027",
+      "cc_cvv": "123"
+    },
+    {
+      "first_name": "Test",
+      "last_name": "User",
+      "address": "Lahore, Pakistan",
+      "cc_num": "1234567812345678",
+      "cc_type": "",
+      "cc_exp_month": "10",
+      "cc_exp_year": "2027",
+      "cc_cvv": "123"
+    },
+    {
+      "first_name": "Test",
+      "last_name": "User",
+      "address": "Lahore, Pakistan",
+      "cc_num": "1234567812345678",
+      "cc_type": "VISA",
+      "cc_exp_month": "",
+      "cc_exp_year": "2027",
+      "cc_cvv": "123"
+    },
+    {
+      "first_name": "Test",
+      "last_name": "User",
+      "address": "Lahore, Pakistan",
+      "cc_num": "1234567812345678",
+      "cc_type": "VISA",
+      "cc_exp_month": "10",
+      "cc_exp_year": "",
+      "cc_cvv": "123"
+    },
+    {
+      "first_name": "Test",
+      "last_name": "User",
+      "address": "Lahore, Pakistan",
+      "cc_num": "1234567812345678",
+      "cc_type": "VISA",
+      "cc_exp_month": "10",
+      "cc_exp_year": "2027",
+      "cc_cvv": ""
+    }
+  ]
+}

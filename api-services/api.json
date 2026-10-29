@@ -1,0 +1,14 @@
+{
+  "baseUrl": "https://api-testing-postman.vercel.app",
+  "endpoints": {
+    "allUsers": "/api/v1/users/all-users",
+    "invalidAllUsers": "/api/v1/users/all-user",
+    "register": "/api/v1/users/register",
+    "login": "/api/v1/users/login",
+    "logout": "/api/v1/users/logout",
+    "updateAccount": "/api/v1/users/update-account",
+    "replaceAccount": "/api/v1/users/replace-account",
+    "deleteAccount": "/api/v1/users/delete-account",
+    "invalidUserEndpoint": "/api/v1/users/invalid-endpoint"
+  }
+}

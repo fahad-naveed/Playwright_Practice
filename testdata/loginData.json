@@ -1,0 +1,45 @@
+{
+    
+    "validUser": [
+    {
+        "url": "https://adactinhotelapp.com/",
+        "username": "fahad123123",
+        "password": "fahad123123"
+    },
+    
+    {
+        "url": "https://adactinhotelapp.com/",
+        "username": "imranali",
+        "password": "imranali"
+    }
+],
+
+"wrongUser": [
+      {
+        "username": "wrongname",
+        "password": "fahad123123"
+      }
+    ],
+  
+    "wrongPassword": [
+      {
+        "username": "fahad123123",
+        "password": "wrongpass"
+      }
+    ],
+
+    "emptyUsername": [
+      {
+        "username": "",
+        "password": "fahad123123"
+      }
+    ],
+
+    "emptyPassword": [
+      {
+        "username": "fahad123123",
+        "password": ""
+      }
+    ]
+ }
+
