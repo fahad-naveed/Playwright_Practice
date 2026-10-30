@@ -4,7 +4,7 @@ import { attachStepScreenshot } from '../utilities/screenshot';
 import searchHotelData from '../testdata/searchHotelData.json';
 import assertionsData from '../testdata/assertionsData.json';
 
-import SearchHotelPage from '../pages/SearchHotelPage';
+import SearchHotelPage from '../pages/searchHotelPage';
 import SelectHotelPage from '../pages/SelectHotelPage';
 
 test.setTimeout(60000);
