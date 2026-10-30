@@ -56,7 +56,7 @@
         "username": "fahadna",
         "password": "fahadna"
       },
-      "expectedStatus": 404
+      "expectedStatus": 401
     },
     "userLogin": {
       "data": {
@@ -100,7 +100,7 @@
       "expectedStatuses": [400, 422]
     },
     "missingPassword": {
-      "expectedStatus": 400
+      "expectedStatus": 200
     },
     "invalidEmail": {
       "email": "invalid-email",

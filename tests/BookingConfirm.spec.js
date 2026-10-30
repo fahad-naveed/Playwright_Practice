@@ -9,10 +9,10 @@ import SearchHotelPage from '../pages/searchHotelPage';
 import SelectHotelPage from '../pages/SelectHotelPage';
 import BookHotelPage from '../pages/bookHotelPage';
 import BookingConfirmationPage from '../pages/bookingConfirmationPage';
-import logout from '../pages/logout';
+import LoginPage from '../pages/loginPage';
+import LogoutPage from '../pages/logoutPage';
 
 test.setTimeout(180000);
-test.use({ storageState: 'auth.json' });
 
 test.describe('Booking Confirmation', () => {
 
@@ -20,7 +20,6 @@ test.describe('Booking Confirmation', () => {
     let selectHotel;
     let bookHotel;
     let bookingConfirmation;
-    let logout;
 
     test.beforeEach(async ({ page }) => {
 
@@ -28,12 +27,14 @@ test.describe('Booking Confirmation', () => {
         selectHotel = new SelectHotelPage(page);
         bookHotel = new BookHotelPage(page);
         bookingConfirmation = new BookingConfirmationPage(page);
-        logout = new LogoutPage(page);
 
         const search_Hotel = searchHotelData.SearchHotels[0];
         const book_Hotel = bookHotelData.bookHotel[0];
         const assertions = assertionsData.assertions[0];
 
+        await page.goto(process.env.BASE_URL);
+        const login = new LoginPage(page);
+        await login.login(process.env.USERNAME, process.env.PASSWORD);
         await page.goto(assertions.search_hotel_url);
         await attachStepScreenshot(page, 'Search Hotel Page Loaded');
 
@@ -90,18 +91,14 @@ test.describe('Booking Confirmation', () => {
     });
 
     test.afterEach(async ({ page }) => {
-        await logout(page);
+        try {
+            const logout = new LogoutPage(page);
+            if (await logout.logoutLink.isVisible({ timeout: 2000 })) {
+                await logout.gotoLogoutPage();
+            }
+        } catch (error) {
+        }
     });
-
-    test.afterEach(async ({ page }) => {
-    try {
-      const logout = new LogoutPage(page);
-      if (await logout.logoutLink.isVisible({ timeout: 2000 })) {
-        await logout.gotoLogoutPage();
-      }
-    } catch (error) {
-    }
-  });
 
 test('Booking Confirmation - Navigate to My Itinerary', async ({ page }) => {
 

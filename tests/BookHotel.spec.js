@@ -8,27 +8,26 @@ import assertionsData from '../testdata/assertionsData.json';
 import SearchHotelPage from '../pages/searchHotelPage';
 import SelectHotelPage from '../pages/SelectHotelPage';
 import BookHotelPage from '../pages/bookHotelPage';
-import logoutPage from '../pages/logoutPage';
-
-
-test.use({ storageState: 'auth.json' });
+import LoginPage from '../pages/loginPage';
+import LogoutPage from '../pages/logoutPage';
 
 let bookHotel;
 let selectHotel;
 let searchHotel;
-let logout;
     
 test.beforeEach(async ({ page }) => {
         searchHotel = new SearchHotelPage(page);
         selectHotel = new SelectHotelPage(page);
         bookHotel = new BookHotelPage(page);
-        logout = new LogoutPage(page);
 
-        const data = searchHotelData.SearchHotels[0];
+    const data = searchHotelData.SearchHotels[0];
         const assertions = assertionsData.assertions[0];
 
-        await page.goto(assertionsData.assertions[0].search_hotel_url);
-        await searchHotel.searchHotel(
+    await page.goto(process.env.BASE_URL);
+    const login = new LoginPage(page);
+    await login.login(process.env.USERNAME, process.env.PASSWORD);
+    await page.goto(assertions.search_hotel_url);
+    await searchHotel.searchHotel(
             data.location, 
             data.hotels, 
             data.room_type, 

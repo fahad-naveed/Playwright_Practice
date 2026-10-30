@@ -11,6 +11,7 @@ setup ('setup', async({page})=>{
     await Login.login(process.env.USERNAME,process.env.PASSWORD);
 
     await expect(page).toHaveURL(assertions.assertions[0].search_hotel_url);
+    await page.waitForURL(assertions.assertions[0].search_hotel_url);
     await page.context().storageState({path:'auth.json'});
 
 }

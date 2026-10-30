@@ -3,8 +3,8 @@ import { attachStepScreenshot } from '../utilities/screenshot';
 
 import loginData from '../testdata/loginData.json';
 import assertions from '../testdata/assertionsData.json';
-import LoginPage from '../pages/loginPage'; 
-import logout from '../pages/logoutPage';
+import LoginPage from '../pages/loginPage';
+import LogoutPage from '../pages/logoutPage';
 
 let login;
 
@@ -14,7 +14,13 @@ test.beforeEach(async ({ page }) => {
 });
 
 test.afterEach(async ({ page }) => {
-    await logout(page);
+    try {
+        const logout = new LogoutPage(page);
+        if (await logout.logoutLink.isVisible({ timeout: 2000 })) {
+            await logout.gotoLogoutPage();
+        }
+    } catch (error) {
+    }
 });
 
 

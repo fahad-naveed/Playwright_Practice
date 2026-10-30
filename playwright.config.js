@@ -55,15 +55,9 @@ reporter: [
   /* Configure projects for major browsers */
   projects: [
 
-    { name: 'setup', testMatch: /.*\.setup\.js/ },
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'],
-
-      storageState: 'auth.json', 
-    },
-
-      dependencies: ['setup'], 
+      use: { ...devices['Desktop Chrome'] },
     },
 
     {

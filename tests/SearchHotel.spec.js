@@ -4,13 +4,16 @@ import { attachStepScreenshot } from '../utilities/screenshot';
 import searchHotelData from '../testdata/searchHotelData.json';
 import assertionsData from '../testdata/assertionsData.json';
 import SearchHotelPage from '../pages/searchHotelPage';
+import LoginPage from '../pages/loginPage';
 import LogoutPage from '../pages/logoutPage';
 
-test.use({ storageState: 'auth.json' });
 let searchHotel;
 
 test.beforeEach(async ({ page }) => {
     searchHotel = new SearchHotelPage(page);
+    await page.goto(process.env.BASE_URL);
+    const login = new LoginPage(page);
+    await login.login(process.env.USERNAME, process.env.PASSWORD);
     await page.goto(assertionsData.assertions[0].search_hotel_url);
 });
 

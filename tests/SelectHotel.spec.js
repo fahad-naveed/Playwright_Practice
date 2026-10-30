@@ -6,24 +6,26 @@ import assertionsData from '../testdata/assertionsData.json';
 
 import SearchHotelPage from '../pages/searchHotelPage';
 import SelectHotelPage from '../pages/SelectHotelPage';
+import LoginPage from '../pages/loginPage';
+import LogoutPage from '../pages/logoutPage';
 
 test.setTimeout(60000);
-test.use({ storageState: 'auth.json' });
 
 test.describe('Select Hotel', () => {
 
     let searchHotel;
     let selectHotel;
-    let logout;
 
     test.beforeEach(async ({ page }) => {
 
         searchHotel = new SearchHotelPage(page);
         selectHotel = new SelectHotelPage(page);
-        logout = new LogoutPage(page);
         const search_Hotel = searchHotelData.SearchHotels[0];
         const assertions = assertionsData.assertions[0];
 
+        await page.goto(process.env.BASE_URL);
+        const login = new LoginPage(page);
+        await login.login(process.env.USERNAME, process.env.PASSWORD);
         await page.goto(assertions.search_hotel_url);
 
         await searchHotel.searchHotel(
