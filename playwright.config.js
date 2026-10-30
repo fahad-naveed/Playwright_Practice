@@ -25,8 +25,8 @@ for (const variable of ['BASE_URL', 'USERNAME', 'PASSWORD']) {
 export default defineConfig({
   testDir: './tests',
   // timeout:100*1000,
-  globalSetup: './utilities/global-setup.js',
-  globalTeardown: './utilities/global-teardown.js',
+  // globalSetup: './utilities/global-setup.js',
+  // globalTeardown: './utilities/global-teardown.js',
  
   /* Run tests in files in parallel */
   fullyParallel: true,
