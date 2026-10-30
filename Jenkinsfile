@@ -1,13 +1,12 @@
-
 pipeline {
-
     agent any
 
     environment {
         BASE_URL = 'https://adactinhotelapp.com/'
         USERNAME = 'fahad123123'
         PASSWORD = 'fahad123123'
-       
+        IMAGE_NAME = 'playwright-app'
+        CONTAINER_NAME = 'playwright-test-container'
     }
 
     stages {
