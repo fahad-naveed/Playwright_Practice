@@ -5,8 +5,7 @@ import searchHotelData from '../testdata/searchHotelData.json';
 import assertionsData from '../testdata/assertionsData.json';
 
 import SearchHotelPage from '../pages/searchHotelPage';
-import SelectHotelPage from '../pages/SelectHotelPage';
-import LoginPage from '../pages/loginPage';
+import SelectHotelPage from '../pages/selectHotelPage';import LoginPage from '../pages/loginPage';
 import LogoutPage from '../pages/logoutPage';
 
 test.setTimeout(60000);

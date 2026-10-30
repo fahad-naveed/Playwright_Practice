@@ -8,8 +8,7 @@ import assertionsData from '../testdata/assertionsData.json';
 
 import LoginPage from '../pages/loginPage'; 
 import SearchHotelPage from '../pages/searchHotelPage';
-import SelectHotelPage from '../pages/SelectHotelPage';
-import BookHotelPage from '../pages/bookHotelPage';
+import SelectHotelPage from '../pages/selectHotelPage';import BookHotelPage from '../pages/bookHotelPage';
 import BookingConfirmationPage from '../pages/bookingConfirmationPage';
 import ItineraryPage from '../pages/ItineraryPage';
 

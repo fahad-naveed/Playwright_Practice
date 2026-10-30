@@ -6,8 +6,7 @@ import bookHotelData from '../testdata/bookHotelData.json';
 import assertionsData from '../testdata/assertionsData.json';
 
 import SearchHotelPage from '../pages/searchHotelPage';
-import SelectHotelPage from '../pages/SelectHotelPage';
-import BookHotelPage from '../pages/bookHotelPage';
+import SelectHotelPage from '../pages/selectHotelPage';import BookHotelPage from '../pages/bookHotelPage';
 import LoginPage from '../pages/loginPage';
 import LogoutPage from '../pages/logoutPage';
 
