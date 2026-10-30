@@ -4,6 +4,7 @@ import { attachStepScreenshot } from '../utilities/screenshot';
 import searchHotelData from '../testdata/searchHotelData.json';
 import assertionsData from '../testdata/assertionsData.json';
 import SearchHotelPage from '../pages/searchHotelPage';
+import LogoutPage from '../pages/logoutPage';
 
 test.use({ storageState: 'auth.json' });
 let searchHotel;

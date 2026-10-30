@@ -4,7 +4,7 @@ import { attachStepScreenshot } from '../utilities/screenshot';
 import loginData from '../testdata/loginData.json';
 import assertions from '../testdata/assertionsData.json';
 import LoginPage from '../pages/loginPage'; 
-import logout from '../pages/logout';
+import logout from '../pages/logoutPage';
 
 let login;
 

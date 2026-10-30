@@ -8,6 +8,7 @@ import assertionsData from '../testdata/assertionsData.json';
 import SearchHotelPage from '../pages/searchHotelPage';
 import SelectHotelPage from '../pages/SelectHotelPage';
 import BookHotelPage from '../pages/bookHotelPage';
+import logoutPage from '../pages/logoutPage';
 
 
 test.use({ storageState: 'auth.json' });
