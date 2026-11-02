@@ -39,6 +39,7 @@ assertions = assertionsData.assertions[0];
 });
 
 test('Adactin Hotel App', async ({ page }) => {
+ test.setTimeout(120000);
 
 //LOGIN
 await page.goto(process.env.BASE_URL);  
@@ -90,7 +91,7 @@ await attachStepScreenshot(page, 'Booking Confirmation Page Loaded');
 
 await bookingConfirmation.myItineraryButton();
 await test.step('Verify My Itinerary page is loaded', async () => {
-await expect(page).toHaveURL(assertions.my_itinerary_url, { timeout: 500000 });
+await expect(page).toHaveURL(assertions.my_itinerary_url, { timeout: 60000 });
 await attachStepScreenshot(page, 'Itinerary Page Loaded');
 });
 

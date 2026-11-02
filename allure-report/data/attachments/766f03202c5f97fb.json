@@ -1,0 +1,4 @@
+{
+  "status": 200,
+  "response": "{\"statusCode\":200,\"data\":{\"_id\":\"6ae754fc03c649439d0ff8bc\",\"username\":\"fahad179354546920400bed2d5\",\"email\":\"updated179354546920400bed2d5@gmail.com\",\"fullname\":\"Updated179354546920400bed2d5\",\"createdAt\":\"2026-11-01T15:04:28.993Z\",\"updatedAt\":\"2026-11-01T15:04:32.296Z\",\"__v\":0,\"refreshToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YWU3NTRmYzAzYzY0OTQzOWQwZmY4YmMiLCJlbWFpbCI6ImZhaGFkMTc5MzU0NTQ2OTIwNDAwYmVkMmQ1QGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiRmFoYWQxNzkzNTQ1NDY5MjA0MDBiZWQyZDUiLCJpYXQiOjE3OTM1NDU0NzEsImV4cCI6MTc5NDQwOTQ3MX0.YuLsOrRjjma1HFBytu67jjFalMpHSoLi6BGqN47k8_o\"},\"message\":\"User details replaced successfully\",\"success\":true}"
+}

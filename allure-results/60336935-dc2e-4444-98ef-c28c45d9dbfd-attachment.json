@@ -1,0 +1,4 @@
+{
+  "status": 201,
+  "response": "{\"statusCode\":201,\"data\":{\"_id\":\"6ae854166d38fb4ce1234ae4\",\"username\":\"fahad17936107735551f42540d\",\"email\":\"fahad17936107735551f42540d@gmail.com\",\"fullname\":\"Fahad17936107735551f42540d\",\"createdAt\":\"2026-11-02T09:12:54.117Z\",\"updatedAt\":\"2026-11-02T09:12:54.117Z\",\"__v\":0},\"message\":\"User registered Successfully\",\"success\":true}"
+}

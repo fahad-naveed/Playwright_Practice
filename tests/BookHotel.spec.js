@@ -10,11 +10,13 @@ import SelectHotelPage from '../pages/selectHotelPage';import BookHotelPage from
 import LoginPage from '../pages/loginPage';
 import LogoutPage from '../pages/logoutPage';
 
+let login;
 let bookHotel;
 let selectHotel;
 let searchHotel;
     
 test.beforeEach(async ({ page }) => {
+        login = new LoginPage(page);
         searchHotel = new SearchHotelPage(page);
         selectHotel = new SelectHotelPage(page);
         bookHotel = new BookHotelPage(page);
@@ -23,7 +25,7 @@ test.beforeEach(async ({ page }) => {
         const assertions = assertionsData.assertions[0];
 
     await page.goto(process.env.BASE_URL);
-    const login = new LoginPage(page);
+    
     await login.login(process.env.USERNAME, process.env.PASSWORD);
     await page.goto(assertions.search_hotel_url);
     await searchHotel.searchHotel(

@@ -38,7 +38,7 @@ test.describe('Post Test Cases', () => {
         expect(logoutResponse.status()).toBe(testData.post.logout.expectedStatus);
     });
 
-    test('User Not Found (404)', async ({}, testInfo) => {
+    test('User Not Found (401)', async ({}, testInfo) => {
         const response = await api.post('login', testData.post.userNotFound.data);
         await attachApiLog(testInfo, 'User Not Found Response', response);
         expect(response.status()).toBe(testData.post.userNotFound.expectedStatus);
