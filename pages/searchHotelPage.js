@@ -25,6 +25,8 @@ constructor(page)
 async searchHotel(location, hotels, room_type, room_nos, datepick_in, datepick_out, adult_room, child_room)
 {
 
+await this.location.waitFor({ state: 'visible' });
+
 await test.step('Select Location', async () => {
     await this.location.selectOption(location);
     await attachStepScreenshot(this.page, 'Location Selected');
@@ -67,6 +69,7 @@ await test.step('Check per Room', async () => {
 
 await test.step('Click Submit', async () => {
     await this.submitButton.click();
+    await this.page.waitForLoadState('domcontentloaded');
     await attachStepScreenshot(this.page, 'After Clicking Submit');
     });   
     
