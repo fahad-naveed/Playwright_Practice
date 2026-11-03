@@ -1,9 +1,11 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
 import dotenv from 'dotenv';
-//insure that the required environment variables are set
-dotenv.config();
- 
+import path from 'node:path';
+
+// Ensure that the required environment variables are set
+dotenv.config({ path: path.join(__dirname, '.env') });
+
 for (const variable of ['BASE_URL', 'APP_USERNAME', 'APP_PASSWORD']) {
   if (!process.env[variable]) {
     throw new Error(`Missing required environment variable: ${variable}`);

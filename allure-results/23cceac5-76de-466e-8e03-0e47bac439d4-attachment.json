@@ -1,0 +1,4 @@
+{
+  "status": 200,
+  "response": "{\"statusCode\":200,\"data\":{\"user\":{\"_id\":\"6adb2b0f057357827d23fe4a\",\"username\":\"fahadn\",\"email\":\"fahad1793155860841420@gmail.com\",\"fullname\":\"Fahad1793155860841420\",\"createdAt\":\"2026-10-23T09:38:23.689Z\",\"updatedAt\":\"2026-11-03T11:38:36.917Z\",\"__v\":0},\"accessToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YWRiMmIwZjA1NzM1NzgyN2QyM2ZlNGEiLCJlbWFpbCI6ImZhaGFkMTc5MzE1NTg2MDg0MTQyMEBnbWFpbC5jb20iLCJ1c2VybmFtZSI6IkZhaGFkMTc5MzE1NTg2MDg0MTQyMCIsImlhdCI6MTc5MzcwNTkxNiwiZXhwIjoxNzkzNzkyMzE2fQ.9MYcsNGT07QdbFDmv98yMeqIbTKoDD0ZES849GHGnUg\",\"refreshToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YWRiMmIwZjA1NzM1NzgyN2QyM2ZlNGEiLCJlbWFpbCI6ImZhaGFkMTc5MzE1NTg2MDg0MTQyMEBnbWFpbC5jb20iLCJ1c2VybmFtZSI6IkZhaGFkMTc5MzE1NTg2MDg0MTQyMCIsImlhdCI6MTc5MzcwNTkxNiwiZXhwIjoxNzk0NTY5OTE2fQ.tOuxUA9Q9I0QzmAO2QsyXmc6Gil4l8CjZr2bh9j-agc\"},\"message\":\"User Logged in successfully\",\"success\":true}"
+}

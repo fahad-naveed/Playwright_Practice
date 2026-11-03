@@ -14,7 +14,7 @@ test.beforeEach(async ({ page }) => {
     await page.goto(process.env.BASE_URL);
     const login = new LoginPage(page);
     await login.login(process.env.APP_USERNAME, process.env.APP_PASSWORD);
-    await page.goto(assertionsData.assertions[0].search_hotel_url);
+    await page.waitForURL(assertionsData.assertions[0].search_hotel_url, { timeout: 60000 });
 });
 
 test.afterEach(async ({ page }) => {
