@@ -43,7 +43,7 @@ test('Adactin Hotel App', async ({ page }) => {
 
 //LOGIN
 await page.goto(process.env.BASE_URL);  
-await login.login(process.env.USERNAME, process.env.PASSWORD);
+await login.login(process.env.APP_USERNAME, process.env.APP_PASSWORD);
 await test.step('Verify login reaches Search Hotel', async () => {
 await expect(page).toHaveURL(assertions.search_hotel_url, { timeout: 60000 });
 await attachStepScreenshot(page, 'Search Page Loaded Successfully');
