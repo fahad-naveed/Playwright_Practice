@@ -20,25 +20,33 @@ test.describe('Delete Test Cases', () => {
         test('Delete User API Test', async ({}, testInfo) => {
         const response = await api.delete('deleteAccount');
         await attachApiLog(testInfo, 'Delete User Response', response);
-        expect(response.status()).toBe(testData.delete.deleteStatus);
+        await test.step('Assert authenticated account deletion succeeds', async () => {
+            expect(response.status()).toBe(testData.delete.deleteStatus);
+        });
         });
     });
 
     test('DELETE - No Auth Error (401)', async ({}, testInfo) => {
         const response = await api.delete('deleteAccount');
         await attachApiLog(testInfo, 'DELETE Unauthorized Response', response);
-        expect(response.status()).toBe(testData.delete.unauthorizedStatus);
+        await test.step('Assert unauthenticated deletion is rejected', async () => {
+            expect(response.status()).toBe(testData.delete.unauthorizedStatus);
+        });
     });
 
     test('DELETE - Invalid Endpoint (404)', async ({}, testInfo) => {
         const response = await api.delete('invalidUserEndpoint');
         await attachApiLog(testInfo, 'DELETE Invalid Endpoint Response', response);
-        expect(response.status()).toBe(testData.delete.invalidEndpointStatus);
+        await test.step('Assert invalid endpoint returns not found', async () => {
+            expect(response.status()).toBe(testData.delete.invalidEndpointStatus);
+        });
     });
 
     test('DELETE - Wrong HTTP Method (404)', async ({}, testInfo) => {
         const response = await api.get('deleteAccount');
         await attachApiLog(testInfo, 'DELETE Wrong Method Response', response);
-        expect(response.status()).toBe(testData.delete.wrongMethodStatus);
+        await test.step('Assert unsupported method returns not found', async () => {
+            expect(response.status()).toBe(testData.delete.wrongMethodStatus);
+        });
     });
 });

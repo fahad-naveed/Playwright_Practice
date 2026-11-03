@@ -23,13 +23,17 @@ test.describe('PUT Test Cases', () => {
             password: user.password
         });
         await attachApiLog(testInfo, 'PUT Replace Account Response', response);
-        expect(response.status()).toBe(testData.put.replaceStatus);
+        await test.step('Assert account replacement succeeds', async () => {
+            expect(response.status()).toBe(testData.put.replaceStatus);
+        });
     });
 
     test('PUT - Empty Request Body', async ({}, testInfo) => {
         const response = await api.put('replaceAccount', testData.put.emptyBody.data);
         await attachApiLog(testInfo, 'PUT Empty Body Response', response);
-        expect(testData.put.emptyBody.expectedStatuses).toContain(response.status());
+        await test.step('Assert empty replacement body is rejected', async () => {
+            expect(testData.put.emptyBody.expectedStatuses).toContain(response.status());
+        });
     });
 
     test('PUT - Missing Password', async ({}, testInfo) => {
@@ -39,7 +43,9 @@ test.describe('PUT Test Cases', () => {
             username: user.username
         });
         await attachApiLog(testInfo, 'PUT Missing Password Response', response);
-        expect(response.status()).toBe(testData.put.missingPassword.expectedStatus);
+        await test.step('Assert replacement without password is rejected', async () => {
+            expect(response.status()).toBe(testData.put.missingPassword.expectedStatus);
+        });
     });
 
     test('PUT - Invalid Email', async ({}, testInfo) => {
@@ -50,6 +56,8 @@ test.describe('PUT Test Cases', () => {
             password: user.password
         });
         await attachApiLog(testInfo, 'PUT Invalid Email Response', response);
-        expect(testData.put.invalidEmail.expectedStatuses).toContain(response.status());
+        await test.step('Assert invalid email replacement is rejected', async () => {
+            expect(testData.put.invalidEmail.expectedStatuses).toContain(response.status());
+        });
     });
 });

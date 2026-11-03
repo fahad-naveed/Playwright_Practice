@@ -21,18 +21,24 @@ test.describe('Patch Test Cases', () => {
             withUniqueId(testData.patch.validUpdate, id)
         );
         await attachApiLog(testInfo, 'PATCH API Response', response);
-        expect(response.status()).toBe(testData.patch.updateStatus);
+        await test.step('Assert account update succeeds', async () => {
+            expect(response.status()).toBe(testData.patch.updateStatus);
+        });
     });
 
     test('PATCH - Empty Request Body', async ({}, testInfo) => {
         const response = await api.update('updateAccount', testData.patch.emptyBody.data);
         await attachApiLog(testInfo, 'PATCH Empty Body Response', response);
-        expect(response.status()).toBe(testData.patch.emptyBody.expectedStatus);
+        await test.step('Assert empty update body is rejected', async () => {
+            expect(response.status()).toBe(testData.patch.emptyBody.expectedStatus);
+        });
     });
 
     test('PATCH - Invalid Email', async ({}, testInfo) => {
         const response = await api.update('updateAccount', testData.patch.invalidEmail.data);
         await attachApiLog(testInfo, 'PATCH Invalid Email Response', response);
-        expect(response.status()).toBe(testData.patch.invalidEmail.expectedStatus);
+        await test.step('Assert invalid email is rejected', async () => {
+            expect(response.status()).toBe(testData.patch.invalidEmail.expectedStatus);
+        });
     });
 });
