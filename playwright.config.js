@@ -2,7 +2,7 @@
 import { defineConfig, devices } from '@playwright/test';
 import dotenv from 'dotenv';
 //insure that the required environment variables are set
-dotenv.config({ override: true });
+dotenv.config();
  
 for (const variable of ['BASE_URL', 'APP_USERNAME', 'APP_PASSWORD']) {
   if (!process.env[variable]) {
