@@ -26,7 +26,7 @@ test.beforeEach(async ({ page }) => {
 
     await page.goto(process.env.BASE_URL);
     
-    await login.login(process.env.USERNAME, process.env.PASSWORD);
+    await login.login(process.env.APP_USERNAME, process.env.APP_PASSWORD);
     await page.goto(assertions.search_hotel_url);
     await searchHotel.searchHotel(
             data.location, 

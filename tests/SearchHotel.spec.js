@@ -13,7 +13,7 @@ test.beforeEach(async ({ page }) => {
     searchHotel = new SearchHotelPage(page);
     await page.goto(process.env.BASE_URL);
     const login = new LoginPage(page);
-    await login.login(process.env.USERNAME, process.env.PASSWORD);
+    await login.login(process.env.APP_USERNAME, process.env.APP_PASSWORD);
     await page.goto(assertionsData.assertions[0].search_hotel_url);
 });
 
