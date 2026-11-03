@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 //insure that the required environment variables are set
 dotenv.config({ override: true });
  
-for (const variable of ['BASE_URL', 'USERNAME', 'PASSWORD']) {
+for (const variable of ['BASE_URL', 'APP_USERNAME', 'APP_PASSWORD']) {
   if (!process.env[variable]) {
     throw new Error(`Missing required environment variable: ${variable}`);
   }
