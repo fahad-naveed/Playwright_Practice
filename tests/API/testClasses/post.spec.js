@@ -48,11 +48,19 @@ test.describe('Post Test Cases', () => {
         });
     });
 
-    test('User Not Found (401)', async ({}, testInfo) => {
+    test('Login with nonexistent username (401)', async ({}, testInfo) => {
         const response = await api.post('login', testData.post.userNotFound.data);
-        await attachApiLog(testInfo, 'User Not Found Response', response);
+        await attachApiLog(testInfo, 'Nonexistent Username Login Response', response);
         await test.step('Assert nonexistent user login is unauthorized', async () => {
             expect(response.status()).toBe(testData.post.userNotFound.expectedStatus);
+        });
+    });
+
+    test('POST to invalid user endpoint (404)', async ({}, testInfo) => {
+        const response = await api.post('invalidUserEndpoint');
+        await attachApiLog(testInfo, 'Invalid User Endpoint Response', response);
+        await test.step('Assert invalid user endpoint returns not found', async () => {
+            expect(response.status()).toBe(testData.post.invalidUserEndpoint.expectedStatus);
         });
     });
 

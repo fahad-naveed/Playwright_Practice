@@ -58,6 +58,9 @@
       },
       "expectedStatus": 401
     },
+    "invalidUserEndpoint": {
+      "expectedStatus": 404
+    },
     "userLogin": {
       "data": {
         "username": "fahadn",
