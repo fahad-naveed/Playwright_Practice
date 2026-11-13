@@ -66,7 +66,7 @@ test.afterEach(async ({ page }) => {
         });
     });
 
-    test.only('Negative Test - Continue without a selection', async ({ page }) => {
+    test.only('Negative Test - Continue without selecting a hotel', async ({ page }) => {
         const assertions = assertionsData.assertions[0];
 
         await selectHotel.continueButton.click();
