@@ -65,4 +65,14 @@ test.afterEach(async ({ page }) => {
             await attachStepScreenshot(page, 'Book Hotel Page Loaded');
         });
     });
+
+    test('Negative Test - Continue without selecting a hotel', async ({ page }) => {
+        const assertions = assertionsData.assertions[0];
+
+        await selectHotel.continueButton.click();
+
+        await test.step('Assert hotel selection error is shown', async () => {
+            await expect(page.getByText(assertions.select_hotel_error, { exact: true })).toBeVisible();
+        });
+    });
 });

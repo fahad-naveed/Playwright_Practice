@@ -34,6 +34,22 @@ test.describe('Post Test Cases', () => {
         });
     });
 
+    test('Empty login body returns bad request (400)', async ({}, testInfo) => {
+        const response = await api.post('login', testData.post.emptyLogin.data);
+        await attachApiLog(testInfo, 'Empty Login Body Response', response);
+        await test.step('Assert empty login body returns bad request', async () => {
+            expect(response.status()).toBe(testData.post.emptyLogin.expectedStatus);
+        });
+    });
+
+    test('Empty registration body returns bad request (400)', async ({}, testInfo) => {
+        const response = await api.post('register', testData.post.emptyRegister.data);
+        await attachApiLog(testInfo, 'Empty Registration Body Response', response);
+        await test.step('Assert empty registration body returns bad request', async () => {
+            expect(response.status()).toBe(testData.post.emptyRegister.expectedStatus);
+        });
+    });
+
     test('User Logout (200)', async ({}, testInfo) => {
         const loginResponse = await api.post('login', testData.post.logoutLogin.data);
         await attachApiLog(testInfo, 'Login Response for Logout Test', loginResponse);

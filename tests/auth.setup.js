@@ -1,7 +1,9 @@
 import {test as setup , expect} from '@playwright/test';
 import LoginPage from '../pages/loginPage';
-import logindata from '../testdata/loginData.json';
 import assertions from '../testdata/assertionsData.json'
+import path from 'node:path';
+
+const authFile = path.resolve('auth.json');
 
 
 setup ('setup', async({page})=>{
@@ -12,7 +14,7 @@ setup ('setup', async({page})=>{
 
     await expect(page).toHaveURL(assertions.assertions[0].search_hotel_url);
     await page.waitForURL(assertions.assertions[0].search_hotel_url);
-    await page.context().storageState({path:'auth.json'});
+    await page.context().storageState({ path: authFile });
 
 }
 );

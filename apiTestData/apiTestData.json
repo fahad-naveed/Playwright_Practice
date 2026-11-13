@@ -37,6 +37,14 @@
       },
       "expectedStatus": 400
     },
+    "emptyLogin": {
+      "data": {},
+      "expectedStatus": 400
+    },
+    "emptyRegister": {
+      "data": {},
+      "expectedStatus": 400
+    },
     "logoutLogin": {
       "data": {
         "fullname": "fahadn",

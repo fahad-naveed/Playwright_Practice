@@ -88,8 +88,7 @@ test(`No Number of Rooms Seleted`, async ({ page }) => {
         await attachStepScreenshot(page, 'Error Message');
     });
 });
- 
- 
+
 test(`No Check In Date`, async ({ page }) => {
     const data = searchHotelData.checkin[0];
     await searchHotel.searchHotel(
@@ -108,7 +107,7 @@ test(`No Check In Date`, async ({ page }) => {
         await attachStepScreenshot(page, 'Error Message');
     });
 });
- 
+
 test(`No Check Out Date`, async ({ page }) => {
     const data = searchHotelData.checkout[0];
     await searchHotel.searchHotel(
@@ -127,7 +126,7 @@ test(`No Check Out Date`, async ({ page }) => {
         await attachStepScreenshot(page, 'Error Message');
     });
 });
- 
+
 test(`No Adults per Room Selected`, async ({ page }) => {
     const data = searchHotelData.adult_room[0];
     await searchHotel.searchHotel(

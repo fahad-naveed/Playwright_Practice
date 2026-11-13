@@ -18,6 +18,7 @@
         "checkin_error": "Please Select Check-In Date",
         "checkout_error": "Please Select Check-Out Date",
         "adult_room_error": "Please Select Adults per Room",
+        "select_hotel_error": "Please Select a Hotel",
         "firstname_error": "Please Enter your First Name",
         "lastname_error": "Please Enter you Last Name",
         "address_error": "Please Enter your Address",

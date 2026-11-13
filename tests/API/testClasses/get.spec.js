@@ -43,4 +43,12 @@ test.describe('Get Test Cases', () => {
             expect(response.status()).toBe(testData.get.wrongMethodStatus);
         });
     });
+
+    test('PATCH to all-users endpoint returns not found (404)', async ({ request }, testInfo) => {
+        const response = await request.patch(api.url('allUsers'));
+        await attachApiLog(testInfo, 'PATCH Wrong Method Response', response);
+        await test.step('Assert unsupported PATCH method returns not found', async () => {
+            expect(response.status()).toBe(testData.get.wrongMethodStatus);
+        });
+    });
 });
